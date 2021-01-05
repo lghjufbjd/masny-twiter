@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    color: #E4E6EB;
+    font-size: 12px;
+}
+nav{
+    position:fixed;
+    z-index: 60;
+    width: 90px;
+    height: 100vh;
+    background-color: #242526;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    border-right: 1px solid #383838;
+}
+
+.nav-button{
+    min-width: 100px;
+    min-height: 90px;
+    background-color: #3A3B3C;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    transition: background-color 0.06s;
+    transition: min-width 0.06s;
+    cursor: pointer;
+}
+.nav-button:hover{
+    transition: background-color 0.1s;
+    transition: min-width 0.1s;
+    background-color: #4E4F50;
+    min-width: 105px;
+}       
+.nav-icon{
+    height: 42px;
+    width: 42px;
+    background-size: cover;
+}
+.nav-button:nth-child(1) {
+    border-top-right-radius: 0px;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin-bottom: 30px;
+}
+.nav-button:nth-child(1) .nav-icon{
+    background-image: url(../images/icons/profile.png);
+}
+.nav-button:nth-child(2) 
+    {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+.nav-button:nth-child(2) .nav-icon{
+    background-image: url(../images/icons/plus.png);
+}
+.nav-button:nth-child(3) 
+    {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+.nav-button:nth-child(3) .nav-icon{
+    background-image: url(../images/icons/messages.png);
+}
+.nav-button:nth-child(4) .nav-icon{
+    background-image: url(../images/icons/settings.png);
+}
+.nav-button:nth-child(5) 
+    {
+        background-color: transparent;
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+        flex-grow: 1;
+}
+.nav-button:nth-child(6) 
+{
+    border-bottom-right-radius: 0px;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin-bottom: 0px !important;
+}
+.nav-button:nth-child(6) .nav-icon{
+    background-image: url(../images/icons/logout.png);
+    
+}
+main{
+    z-index: 1;
+    top:0;
+    position: absolute;
+    height: 5000px;
+    width: 100%;
+    background-color: #131415;
+}
+#posts{
+    
+    padding: 45px;
+    position: absolute;
+    top:0;
+    width: 700px;
+    height: 100%;
+    margin-left: 100px;
+
+}
+.post{
+    background-color: #1C1E1F;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    border-radius: 3px;
+    z-index: 10;
+}
+.author-card{
+    position: relative;
+    background-color: #3A3B3C;
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    width: 165px;
+    border-radius: 2px;
+    align-self: flex-end;
+    right: -20px;
+
+
+}
+#gap{
+    background-color: transparent;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    flex-grow: 1;
+  
+}
+.name-and-data{
+    padding-top: 2px;
+    padding-left: 10px;
+}
+
+.profile-picture{
+    border-radius: 2px;
+    width: 36px;
+}
+.name{
+    
+    color: #E4E6EB;
+}
+.date{
+    font-size: 10px;
+    text-align: center;
+    color: #979797;
+}
+
+#create-new-post{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgba(19, 20, 21, 0.48);
+}
+#create-new-post-dialog{
+    border: 1px solid #484848;
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 599px;
+    min-height: 305px;
+    background: #1C1E1F;
+    border-radius: 3px;
+    padding: 14px;
+    padding-top: 12px;
+}
+.textarea{
+    width:100%;
+    min-height:50px;
+}
+.text{
+    line-height: 18px;
+
+}
+.textarea div{
+    outline: none;
+    width:100%;
+    min-height:50px;
+    font-size: 18px;
+    line-height: 27px;          
+    color: #E4E6EB;
+
+}
+#post-button{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 45px;
+    width: 570px;
+    background: #3A3B3C;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.06s;
+}
+#post-button p{
+    text-align: center;
+    color: #DDDAD6;
+    font-size: 18px;
+    line-height: 27px;
+}
+#post-button:hover{
+    transition: background-color 0.1s;
+    background-color: #4E4F50; 
+
+}
